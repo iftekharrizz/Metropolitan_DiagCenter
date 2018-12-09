@@ -40,28 +40,30 @@ public class Activitypanel extends javax.swing.JFrame {
         add = new javax.swing.JButton();
         delete1 = new javax.swing.JButton();
         update1 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         back = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu7 = new javax.swing.JMenu();
         menu_exit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        diag_name.setFont(new java.awt.Font("Tekton Pro Cond", 1, 36)); // NOI18N
-        diag_name.setText("DBMS Diagnostic Center");
-        jPanel1.add(diag_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 330, 150));
+        diag_name.setFont(new java.awt.Font("Tekton Pro Cond", 1, 40)); // NOI18N
+        diag_name.setForeground(new java.awt.Color(0, 204, 0));
+        diag_name.setText("Activity Panel");
+        jPanel1.add(diag_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 180, 130));
 
         search.setBackground(new java.awt.Color(102, 102, 102));
         search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_search-icon-tm_520566.png"))); // NOI18N
         search.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.black, java.awt.Color.gray));
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 130, 130));
+        search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 130, 130));
 
         add.setBackground(new java.awt.Color(204, 255, 102));
         add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_1_41688.png"))); // NOI18N
@@ -71,7 +73,7 @@ public class Activitypanel extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 130, 130));
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 130, 130));
 
         delete1.setBackground(new java.awt.Color(255, 102, 102));
         delete1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_Remove_27874.png"))); // NOI18N
@@ -81,7 +83,7 @@ public class Activitypanel extends javax.swing.JFrame {
                 delete1ActionPerformed(evt);
             }
         });
-        jPanel1.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 130, 130));
+        jPanel1.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 130, 130));
 
         update1.setBackground(new java.awt.Color(255, 204, 102));
         update1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_system-software-update_24350.png"))); // NOI18N
@@ -91,11 +93,23 @@ public class Activitypanel extends javax.swing.JFrame {
                 update1ActionPerformed(evt);
             }
         });
-        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 130, 130));
+        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 130, 130));
 
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/diag_back.jpg"))); // NOI18N
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_system-log-out_118796.png"))); // NOI18N
+        jButton1.setText("Log Out");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 0, 0), new java.awt.Color(204, 0, 204), new java.awt.Color(102, 255, 102), new java.awt.Color(204, 0, 0)));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 530, 90, 40));
+
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/activitty.jpg"))); // NOI18N
         back.setText("jLabel1");
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 870, 660));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 840, 600));
 
         jMenuBar1.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -117,21 +131,6 @@ public class Activitypanel extends javax.swing.JFrame {
         jMenu7.add(menu_exit);
 
         jMenuBar1.add(jMenu7);
-
-        jMenu2.setText("Edit   ");
-        jMenuBar1.add(jMenu2);
-
-        jMenu4.setText("Help   ");
-        jMenuBar1.add(jMenu4);
-
-        jMenu3.setText("About   ");
-        jMenuBar1.add(jMenu3);
-
-        jMenu5.setText("Date   ");
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("Time");
-        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -178,6 +177,35 @@ public class Activitypanel extends javax.swing.JFrame {
         ob.setVisible(true);
     }//GEN-LAST:event_update1ActionPerformed
 
+    private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        Searchframe ob = new Searchframe();
+        ob.setVisible(true);
+    }//GEN-LAST:event_searchActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+            Login lol = new Login();
+            lol.setVisible(true);
+//        try {
+//            
+//
+//        } catch (Exception e) {
+//
+//            JOptionPane.showMessageDialog(rootPane, e);
+//        } finally {
+//            try {
+//                resultSet.close();
+//                pst.close();
+//                connection.close();
+//            } catch (Exception e) {
+//                JOptionPane.showMessageDialog(rootPane, e);
+//            }
+//        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -218,11 +246,7 @@ public class Activitypanel extends javax.swing.JFrame {
     private javax.swing.JLabel back;
     private javax.swing.JButton delete1;
     private javax.swing.JLabel diag_name;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;

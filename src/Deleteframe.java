@@ -39,7 +39,7 @@ public class Deleteframe extends javax.swing.JFrame {
         setResizable(false);
         //groupbutton();
     }
-    private void UpdatePatientInfo()
+    void UpdatePatientInfo()
     {
         try{
             String sql= "select * from patient";
@@ -84,23 +84,22 @@ public class Deleteframe extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jt_search = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu7 = new javax.swing.JMenu();
-        menu_close = new javax.swing.JMenuItem();
         menu_exit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 153));
+        jTabbedPane1.setBackground(new java.awt.Color(102, 102, 255));
+        jTabbedPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 51, 51)));
+
+        jPanel3.setBackground(new java.awt.Color(153, 204, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Delete Patient Info", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 13))); // NOI18N
 
         jLabel6.setText("Entry No.");
+
+        jt_entryd.setBackground(new java.awt.Color(153, 204, 255));
+        jt_entryd.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.black, java.awt.Color.lightGray));
 
         jLabel7.setText("(To be deleted.)");
 
@@ -127,41 +126,41 @@ public class Deleteframe extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jt_entryd, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addGap(19, 19, 19))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addContainerGap(42, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jt_entryd, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel7)))
-                        .addGap(22, 22, 22)))
-                .addContainerGap())
+                        .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(114, 114, 114)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jt_entryd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(33, 33, 33)
+                    .addComponent(jt_entryd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
                 .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel4.setBackground(new java.awt.Color(51, 204, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Information Table", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
         tab_info.setModel(new javax.swing.table.DefaultTableModel(
@@ -198,14 +197,14 @@ public class Deleteframe extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search Panel", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
         jt_search.setText("+880");
@@ -259,27 +258,14 @@ public class Deleteframe extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("                                                              Patient                                                          ", jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 716, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("                                                                  Doctor                                                              ", jPanel2);
 
         jMenuBar1.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -289,16 +275,6 @@ public class Deleteframe extends javax.swing.JFrame {
                 jMenu7ActionPerformed(evt);
             }
         });
-
-        menu_close.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        menu_close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_Close_1891023.png"))); // NOI18N
-        menu_close.setText("Close");
-        menu_close.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menu_closeActionPerformed(evt);
-            }
-        });
-        jMenu7.add(menu_close);
 
         menu_exit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         menu_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/EXIT.png"))); // NOI18N
@@ -311,21 +287,6 @@ public class Deleteframe extends javax.swing.JFrame {
         jMenu7.add(menu_exit);
 
         jMenuBar1.add(jMenu7);
-
-        jMenu2.setText("Edit   ");
-        jMenuBar1.add(jMenu2);
-
-        jMenu4.setText("Help   ");
-        jMenuBar1.add(jMenu4);
-
-        jMenu3.setText("About   ");
-        jMenuBar1.add(jMenu3);
-
-        jMenu5.setText("Date   ");
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("Time");
-        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -347,102 +308,55 @@ public class Deleteframe extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu7ActionPerformed
 
-    private void menu_closeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_closeActionPerformed
-
-        try {
-            setVisible(false);
-            Login log = new Login();
-            log.setVisible(true);
-
-        } catch (Exception e) {
-
-            JOptionPane.showMessageDialog(rootPane, e);
-        } finally {
-            try {
-                resultSet.close();
-                pst.close();
-                connection.close();
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(rootPane, e);
-            }
-        }
-
-    }//GEN-LAST:event_menu_closeActionPerformed
-
     private void menu_exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_exitActionPerformed
             System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_menu_exitActionPerformed
 
-    private void tab_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_infoMouseClicked
-            try{                                      
-                int row = tab_info.getSelectedRow();
-                String tableClick = (tab_info.getModel().getValueAt(row,0).toString());
-                String sql = "select * from patient where Entry_no = '"+tableClick+"' ";
-                pst = connection.prepareStatement(sql);
-                resultSet = pst.executeQuery();
-                
-                if(resultSet.next())
-                {
-                    jt_entryd.setText(resultSet.getString("Entry_no"));
-                    
-                }
-               
-                    
-                }catch(SQLException e){
-                JOptionPane.showMessageDialog(rootPane, e);
-                }
-
-    }//GEN-LAST:event_tab_infoMouseClicked
-
-    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
-        // TODO add your handling code here:\
-        int p;
-        p = JOptionPane.showConfirmDialog(rootPane,"Do you really want to delete?","Delete",JOptionPane.YES_NO_OPTION);
-        if(p==0)
-        {
-            try {
-                String sql= "delete from patient where Entry_no=?";
-                pst = connection.prepareStatement(sql);
-                pst.setString(1, jt_entryd.getText());
-                pst.execute();
-                JOptionPane.showMessageDialog(rootPane, "Deleted!");
-            } catch (SQLException ex) {
-                JOptionPane.showMessageDialog(rootPane, "Not Deleted!");
-                
-            }
-            UpdatePatientInfo();
-            
-        }
-        
-    }//GEN-LAST:event_btn_deleteActionPerformed
-
-    private void jt_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_searchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jt_searchActionPerformed
-
     private void jt_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_searchKeyReleased
-       
+
         String sql = "select * from patient where Mobile_no =?";
         try {
-           
-            
+
             pst = connection.prepareStatement(sql);
             pst.setString(1,jt_search.getText());
             resultSet = pst.executeQuery();
             if(resultSet.next())
             {
                 jt_entryd.setText(resultSet.getString("Entry_no"));
-                
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(Deleteframe.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+
     }//GEN-LAST:event_jt_searchKeyReleased
+
+    private void jt_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jt_searchActionPerformed
+
+    private void tab_infoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tab_infoMouseClicked
+        try{
+            int row = tab_info.getSelectedRow();
+            String tableClick = (tab_info.getModel().getValueAt(row,0).toString());
+            String sql = "select * from patient where Entry_no = '"+tableClick+"' ";
+            pst = connection.prepareStatement(sql);
+            resultSet = pst.executeQuery();
+
+            if(resultSet.next())
+            {
+                jt_entryd.setText(resultSet.getString("Entry_no"));
+
+            }
+
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_tab_infoMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-          try {
+        try {
             setVisible(false);
             Activitypanel lol = new Activitypanel();
             lol.setVisible(true);
@@ -461,6 +375,28 @@ public class Deleteframe extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
+        // TODO add your handling code here:\
+        int p;
+        p = JOptionPane.showConfirmDialog(rootPane,"Do you really want to delete?","Delete",JOptionPane.YES_NO_OPTION);
+        if(p==0)
+        {
+            try {
+                String sql= "delete from patient where Entry_no=?";
+                pst = connection.prepareStatement(sql);
+                pst.setString(1, jt_entryd.getText());
+                pst.execute();
+                JOptionPane.showMessageDialog(rootPane, "Deleted!");
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(rootPane, "Not Deleted!");
+
+            }
+            UpdatePatientInfo();
+
+        }
+
+    }//GEN-LAST:event_btn_deleteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -478,20 +414,20 @@ public class Deleteframe extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            //java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+           // java.util.logging.Logger.getLogger(PatientInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PatientInfo().setVisible(true);
+                new Welcome().setVisible(true);
             }
         });
     }
@@ -502,15 +438,9 @@ public class Deleteframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -518,7 +448,6 @@ public class Deleteframe extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jt_entryd;
     private javax.swing.JTextField jt_search;
-    private javax.swing.JMenuItem menu_close;
     private javax.swing.JMenuItem menu_exit;
     private javax.swing.JTable tab_info;
     // End of variables declaration//GEN-END:variables

@@ -35,34 +35,22 @@ public class Welcome extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        diag_name = new javax.swing.JLabel();
-        admin = new javax.swing.JLabel();
         receptionist = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         back = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu7 = new javax.swing.JMenu();
         menu_exit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin.png"))); // NOI18N
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 102, 102)));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
-
+        jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/receptionist.png"))); // NOI18N
         jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 102, 102)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -70,23 +58,35 @@ public class Welcome extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, -1, -1));
-
-        diag_name.setFont(new java.awt.Font("Tekton Pro Cond", 1, 36)); // NOI18N
-        diag_name.setText("DBMS Diagnostic Center");
-        jPanel1.add(diag_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 330, 150));
-
-        admin.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        admin.setText("ADMIN");
-        jPanel1.add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, -1, 20));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 120, 100));
 
         receptionist.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        receptionist.setForeground(new java.awt.Color(51, 255, 51));
         receptionist.setText("RECEPTIONIST");
-        jPanel1.add(receptionist, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 420, 100, -1));
+        jPanel1.add(receptionist, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 420, 100, -1));
 
-        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/diag_back.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yyyyyyyyyyyyyyyy.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 270));
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 153));
+        jLabel2.setText("To");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, 40, 30));
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 153));
+        jLabel3.setText("\nMetropolitan Diangnostic Center");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 370, 50));
+
+        jLabel4.setFont(new java.awt.Font("Verdana", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 153));
+        jLabel4.setText("Welcome");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 110, 30));
+
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pulse.jpg"))); // NOI18N
         back.setText("jLabel1");
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 870, 660));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 480));
 
         jMenuBar1.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -108,21 +108,6 @@ public class Welcome extends javax.swing.JFrame {
         jMenu7.add(menu_exit);
 
         jMenuBar1.add(jMenu7);
-
-        jMenu2.setText("Edit   ");
-        jMenuBar1.add(jMenu2);
-
-        jMenu4.setText("Help   ");
-        jMenuBar1.add(jMenu4);
-
-        jMenu3.setText("About   ");
-        jMenuBar1.add(jMenu3);
-
-        jMenu5.setText("Date   ");
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("Time");
-        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -147,12 +132,6 @@ public class Welcome extends javax.swing.JFrame {
     private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
 
     }//GEN-LAST:event_jMenu7ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            setVisible(false);
-            Admin ob = new Admin ();
-            ob.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
             setVisible(false);
@@ -196,20 +175,18 @@ public class Welcome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel admin;
     private javax.swing.JLabel back;
-    private javax.swing.JLabel diag_name;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem menu_exit;
     private javax.swing.JLabel receptionist;
     // End of variables declaration//GEN-END:variables
+
+    
 }
