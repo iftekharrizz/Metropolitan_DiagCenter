@@ -117,7 +117,7 @@ public class Searchframe extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tab_infoo);
 
-        jt_combosrch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entry_no", "Name", "Age", "Sex", "Ref_by", "Mobile_no" }));
+        jt_combosrch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All attributes", "Entry number", "Name", "Age", "Sex", "Reffered by", "Mobile number" }));
         jt_combosrch.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.black, java.awt.Color.gray));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
@@ -231,35 +231,44 @@ public class Searchframe extends javax.swing.JFrame {
         try{
            String sql = null; 
            String s=(String) jt_combosrch.getSelectedItem();
+            //sql="select * from patient where Name like '%"+jt_search.getText()+"%'";
+            if("All attributes".equals(s)) {
+                sql= "select * from patient where Entry_no like '%"+jt_search.getText()+"%' OR"
+                        + " Name like '%"+jt_search.getText()+"%' OR"
+                        + " Age like '%"+jt_search.getText()+"%' OR"
+                        + " Sex like '%"+jt_search.getText()+"%' OR "
+                        + "Ref_by like '%"+jt_search.getText()+"%' OR"
+                        + " Mobile_no like '%"+jt_search.getText()+"%'";
+                
+            } 
             
-            
-            if("Entry_no".equals(s)) {
-                sql= "select * from patient where Entry_no=?";
+            else if("Entry number".equals(s)) {
+                sql= "select * from patient where Entry_no like '%"+jt_search.getText()+"%'";
                 
             } 
             else if("Name".equals(s)) {
-                sql= "select * from patient where Name=?";
+                sql= "select * from patient where Name like '%"+jt_search.getText()+"%'";
                 
             } 
             else if("Age".equals(s)) {
-                sql= "select * from patient where Age=?";
+                sql= "select * from patient where Age like '%"+jt_search.getText()+"%'";
                 
             } 
             else if("Sex".equals(s)) {
-                sql= "select * from patient where Sex=?";
+                sql= "select * from patient where Sex like '"+jt_search.getText()+"%'";
                 
             } 
-            else if("Ref_by".equals(s)) {
-                sql= "select * from patient where Ref_by=?";
+            else if("Reffered by".equals(s)) {
+                sql= "select * from patient where Ref_by like '%"+jt_search.getText()+"%'";
                 
             } 
-            else if("Mobile_no".equals(s)) {
-                sql= "select * from patient where Mobile_no=?";
+            else if("Mobile number".equals(s)) {
+                sql= "select * from patient where Mobile_no like '%"+jt_search.getText()+"%'";
                 
             }
             pst = connection.prepareStatement(sql);
             
-            pst.setString(1,String.valueOf(jt_search.getText()));
+            //pst.setString(1,String.valueOf(jt_search.getText()));
             resultSet = pst.executeQuery();
             tab_infoo.setModel(DbUtils.resultSetToTableModel(resultSet));
             pst.close();

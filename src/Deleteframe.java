@@ -207,7 +207,6 @@ public class Deleteframe extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(153, 204, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Search Panel", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
 
-        jt_search.setText("+880");
         jt_search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jt_searchActionPerformed(evt);
@@ -220,29 +219,27 @@ public class Deleteframe extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setText("Search by Mobile number :");
+        jLabel1.setText("Search :");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jt_search)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jt_search)
+                .addGap(14, 14, 14))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jt_search, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jt_search, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -314,12 +311,19 @@ public class Deleteframe extends javax.swing.JFrame {
 
     private void jt_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_searchKeyReleased
 
-        String sql = "select * from patient where Mobile_no =?";
+        String sql= "select * from patient where Entry_no like '%"+jt_search.getText()+"%' OR"
+                        + " Name like '%"+jt_search.getText()+"%' OR"
+                        + " Age like '%"+jt_search.getText()+"%' OR"
+                        + " Sex like '%"+jt_search.getText()+"%' OR "
+                        + "Ref_by like '%"+jt_search.getText()+"%' OR"
+                        + " Mobile_no like '%"+jt_search.getText()+"%'";
         try {
 
             pst = connection.prepareStatement(sql);
-            pst.setString(1,jt_search.getText());
+            //pst.setString(1,jt_search.getText());
             resultSet = pst.executeQuery();
+            tab_info.setModel(DbUtils.resultSetToTableModel(resultSet));
+            //pst.close();
             if(resultSet.next())
             {
                 jt_entryd.setText(resultSet.getString("Entry_no"));

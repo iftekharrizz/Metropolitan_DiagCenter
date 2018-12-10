@@ -41,6 +41,8 @@ public class Activitypanel extends javax.swing.JFrame {
         delete1 = new javax.swing.JButton();
         update1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        pathstatus = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         back = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu7 = new javax.swing.JMenu();
@@ -53,7 +55,7 @@ public class Activitypanel extends javax.swing.JFrame {
         diag_name.setFont(new java.awt.Font("Tekton Pro Cond", 1, 40)); // NOI18N
         diag_name.setForeground(new java.awt.Color(0, 204, 0));
         diag_name.setText("Activity Panel");
-        jPanel1.add(diag_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 180, 130));
+        jPanel1.add(diag_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 180, 40));
 
         search.setBackground(new java.awt.Color(102, 102, 102));
         search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_search-icon-tm_520566.png"))); // NOI18N
@@ -63,7 +65,7 @@ public class Activitypanel extends javax.swing.JFrame {
                 searchActionPerformed(evt);
             }
         });
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 130, 130));
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 340, 130, 130));
 
         add.setBackground(new java.awt.Color(204, 255, 102));
         add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_1_41688.png"))); // NOI18N
@@ -73,7 +75,7 @@ public class Activitypanel extends javax.swing.JFrame {
                 addActionPerformed(evt);
             }
         });
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 130, 130));
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 130, 130));
 
         delete1.setBackground(new java.awt.Color(255, 102, 102));
         delete1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_Remove_27874.png"))); // NOI18N
@@ -83,7 +85,7 @@ public class Activitypanel extends javax.swing.JFrame {
                 delete1ActionPerformed(evt);
             }
         });
-        jPanel1.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 130, 130));
+        jPanel1.add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 130, 130));
 
         update1.setBackground(new java.awt.Color(255, 204, 102));
         update1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/iconfinder_system-software-update_24350.png"))); // NOI18N
@@ -93,7 +95,7 @@ public class Activitypanel extends javax.swing.JFrame {
                 update1ActionPerformed(evt);
             }
         });
-        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 130, 130));
+        jPanel1.add(update1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 130, 130));
 
         jButton1.setBackground(new java.awt.Color(51, 51, 51));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -107,9 +109,23 @@ public class Activitypanel extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 530, 90, 40));
 
+        pathstatus.setBackground(new java.awt.Color(204, 255, 102));
+        pathstatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/id (1).png"))); // NOI18N
+        pathstatus.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, java.awt.Color.black, java.awt.Color.gray));
+        pathstatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pathstatusActionPerformed(evt);
+            }
+        });
+        jPanel1.add(pathstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, 130, 130));
+
+        jLabel1.setForeground(new java.awt.Color(0, 204, 0));
+        jLabel1.setText("---------------------------------------------------------");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 230, -1));
+
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/activitty.jpg"))); // NOI18N
         back.setText("jLabel1");
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 840, 600));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 600));
 
         jMenuBar1.setBorder(new javax.swing.border.MatteBorder(null));
 
@@ -206,6 +222,13 @@ public class Activitypanel extends javax.swing.JFrame {
 //        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void pathstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pathstatusActionPerformed
+        // TODO add your handling code here:
+       setVisible(false);
+       Pathupdate up = new Pathupdate();
+       up.setVisible(true);
+    }//GEN-LAST:event_pathstatusActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -247,10 +270,12 @@ public class Activitypanel extends javax.swing.JFrame {
     private javax.swing.JButton delete1;
     private javax.swing.JLabel diag_name;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem menu_exit;
+    private javax.swing.JButton pathstatus;
     private javax.swing.JButton search;
     private javax.swing.JButton update1;
     // End of variables declaration//GEN-END:variables

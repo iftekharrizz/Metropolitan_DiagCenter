@@ -35,12 +35,14 @@ public class Welcome extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btn_patient = new javax.swing.JButton();
         receptionist = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        btn_reception = new javax.swing.JButton();
+        receptionist1 = new javax.swing.JLabel();
         back = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu7 = new javax.swing.JMenu();
@@ -50,20 +52,20 @@ public class Welcome extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/receptionist.png"))); // NOI18N
-        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 102, 102)));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_patient.setBackground(new java.awt.Color(0, 0, 0));
+        btn_patient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/recep.png"))); // NOI18N
+        btn_patient.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 102, 102)));
+        btn_patient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_patientActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 120, 100));
+        jPanel1.add(btn_patient, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 320, 110, 100));
 
         receptionist.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         receptionist.setForeground(new java.awt.Color(51, 255, 51));
-        receptionist.setText("RECEPTIONIST");
-        jPanel1.add(receptionist, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 420, 100, -1));
+        receptionist.setText("PATHOLOGIST");
+        jPanel1.add(receptionist, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, 100, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/yyyyyyyyyyyyyyyy.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -83,6 +85,21 @@ public class Welcome extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 204, 153));
         jLabel4.setText("Welcome");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 110, 30));
+
+        btn_reception.setBackground(new java.awt.Color(0, 0, 0));
+        btn_reception.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pathology.png"))); // NOI18N
+        btn_reception.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(0, 0, 0), new java.awt.Color(102, 102, 102)));
+        btn_reception.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_receptionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_reception, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 110, 100));
+
+        receptionist1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        receptionist1.setForeground(new java.awt.Color(51, 255, 51));
+        receptionist1.setText("RECEPTIONIST");
+        jPanel1.add(receptionist1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 420, 100, -1));
 
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pulse.jpg"))); // NOI18N
         back.setText("jLabel1");
@@ -133,11 +150,18 @@ public class Welcome extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenu7ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_patientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_patientActionPerformed
             setVisible(false);
             Login ob = new Login ();
             ob.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_patientActionPerformed
+
+    private void btn_receptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_receptionActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        Lablogin lb = new Lablogin();
+        lb.setVisible(true);
+    }//GEN-LAST:event_btn_receptionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,7 +200,8 @@ public class Welcome extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel back;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btn_patient;
+    private javax.swing.JButton btn_reception;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -186,6 +211,7 @@ public class Welcome extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem menu_exit;
     private javax.swing.JLabel receptionist;
+    private javax.swing.JLabel receptionist1;
     // End of variables declaration//GEN-END:variables
 
     
